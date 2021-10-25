@@ -1,23 +1,23 @@
 Vscode cheat sheet
 ===
 
-* Opening `Palette`  **CTRL+P**
-* Opening `Command Palette`  **CTRL+SHIFT+P**
+* `Palette`  **CTRL+P**
+* `Command Palette`  **CTRL+SHIFT+P**
 	* `Git Clone`  Cloning a git repository
 	* `Merge`  Merge branches
-* Adding `Type Checking` to a JS file 
+* `Type Checking` to a JS file 
 	```javascript
 	// @ts-nocheck
 	// @ts-check
 	``` 
-* Opening built-in `Terminal`  **CTRL+`**
+* Built-in `Terminal`  **CTRL+`**
 	* Select `Javascript Debug Terminal` as `Default Profile`
 * Closing built-in `Terminal`  **CTRL+D**
 * `Find` And `Replace`  **CTRL+F**, **CTRL+H**
 * `Find` And `Replace Globally`  **CTRL+SHIFT+F**, **CTRL+SHIFT+H**
 * `Side By Side` Editing  **CTRL+\\**
 * `Fullscreen`  **F11**
-* Open `Markdown preview` **CTRL+SHIFT+V**
+* `Markdown preview` **CTRL+SHIFT+V**
 * `Sidebar` Toggle **CTRL+B** 
 ---
 
@@ -29,7 +29,7 @@ Vscode cheat sheet
 * `Select` the current `line`  **CTRL+L**
 * Invoke `IntelliSense`  **CTRL+SPACE**
 * `Multiple` selections (multi-cursor)  Hold **ALT** and **select**
-* Code `Folding`  **Ctrl+Shift+[** , **]**
+* Code Folding  **Ctrl+Shift+[** , **]**
 * `Rename` Refactoring  **F2**
 * `Navigating` on Errors and Warnings  **F8**
 * Go to `Definition` **F12**
