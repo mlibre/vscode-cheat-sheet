@@ -18,7 +18,9 @@ Vscode cheat sheet
 * `Side By Side` Editing  **CTRL+\\**
 * `Fullscreen`  **F11**
 * `Markdown preview` **CTRL+SHIFT+V**
-* `Sidebar` Toggle **CTRL+B** 
+* `Sidebar` Toggle **CTRL+B**
+* `Zoom` entire vscode **CTRL + and CTRL -**
+* `Font` size **CTRL + Mouse wheel** 
 ---
 
 ## Editor
