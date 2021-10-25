@@ -81,6 +81,7 @@ git config --global credential.helper store
 	},
 	"liveshare.authenticationProvider": "GitHub",
 	"window.zoomLevel": 2,
+	"editor.tabSize": 3,
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
 	"eslint.format.enable": true,
