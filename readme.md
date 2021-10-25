@@ -129,7 +129,7 @@ git config --global credential.helper store
 ```
 
 ## Eslint
-```json
+```javascript
 module.exports = {
 	"env": {
 		"commonjs": true,
