@@ -19,7 +19,7 @@ Vscode cheat sheet
 * `Fullscreen`  **F11**
 * `Markdown preview` **CTRL+SHIFT+V**
 * `Sidebar` Toggle **CTRL+B**
-* `Zoom` entire vscode **CTRL + and CTRL -**
+* `Zoom in/out` the whole vscode **CTRL + and CTRL -**
 * `Font` size **CTRL + Mouse wheel** 
 
 ---
