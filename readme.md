@@ -14,6 +14,7 @@ Vscode cheat sheet
 	* Select `Javascript Debug Terminal` as `Default Profile`
 * `Extensions` **CTRL + SHIFT + X** 
 	* Login to the Grammarly: `> grammarly.login`
+	* logout to the Grammarly: `> grammarly.logout`
 * Closing built-in `Terminal`  **CTRL + D**
 * `Find` And `Replace`  **CTRL + F**, **CTRL + H**
 * `Find` And `Replace Globally`  **CTRL + SHIFT + F**, **CTRL + SHIFT + H**
@@ -55,6 +56,39 @@ git config user.email m.gh@linuxmail.org
 git config user.name mlibre
 git config --global credential.helper store
 ```
+
+## Common NPM commands
+```bash
+npm adduser
+npm publish --access=public
+```
+
+## Using Github Action To Publish A Package On NPM Registry
+1. Create a NPM token: **https://www.npmjs.com/settings/mlibre/tokens/**
+2. Create a secret variable named `NPM_TOKEN` from the github repository settings: **https://github.com/mlibre/Ethereum-Smart-Contract-Deployer/settings/secrets/actions/new**
+3. Create a yml file in the repository: `.github/workflows/npm.yml`
+```yml
+name: Publish on NPM registry
+
+on:
+  push:
+    branches: ['master']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          registry-url: https://registry.npmjs.org/
+      - run: npm install
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+```
+
 
 ## Settings JSON
 ```json
