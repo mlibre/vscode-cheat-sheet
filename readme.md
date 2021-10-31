@@ -1,45 +1,47 @@
 Vscode cheat sheet
 ===
 
-* `Palette`  **CTRL+P**
-* `Command Palette`  **CTRL+SHIFT+P**
-	* `Git Clone`  Cloning a git repository
-	* `Merge`  Merge branches
-* `Type Checking` to a JS file 
+* `Palette`  **CTRL + P**
+* `Command Palette`  **CTRL + SHIFT + P**
+	* `Git Clone`
+	* `Merge`
+* `Type Checking`
 	```javascript
 	// @ts-nocheck
 	// @ts-check
 	``` 
-* Built-in `Terminal`  **CTRL+`**
+* Built-in `Terminal`  **CTRL + `**
 	* Select `Javascript Debug Terminal` as `Default Profile`
-* Closing built-in `Terminal`  **CTRL+D**
-* `Find` And `Replace`  **CTRL+F**, **CTRL+H**
-* `Find` And `Replace Globally`  **CTRL+SHIFT+F**, **CTRL+SHIFT+H**
-* `Side By Side` Editing  **CTRL+\\**
+* `Extensions` **CTRL + SHIFT + X** 
+	* Login to the Grammarly: `> grammarly.login`
+* Closing built-in `Terminal`  **CTRL + D**
+* `Find` And `Replace`  **CTRL + F**, **CTRL + H**
+* `Find` And `Replace Globally`  **CTRL + SHIFT + F**, **CTRL + SHIFT + H**
+* `Side By Side` Editing  **CTRL + \\**
 * `Fullscreen`  **F11**
-* `Markdown preview` **CTRL+SHIFT+V**
-* `Sidebar` Toggle **CTRL+B**
+* `Markdown` Preview **CTRL + SHIFT + V**
+* `Sidebar` Toggle **CTRL + B**
 * `Zoom in/out` the whole vscode **CTRL + and CTRL -**
 * `Font` size **CTRL + Mouse wheel** 
 
 ---
 
-## Editor
-* `Copy` an entire `line` (when no text is selected)  **CTRL+C**
-* `Delete` an entire `line` (when no text is selected)  **CTRL+SHIFT+K**
-* `Cut` an entire `line` (when no text is selected)  **CTRL+X**
+## Editor Shortcuts
+* `Copy` an entire `line` (when no text is selected)  **CTRL + C**
+* `Delete` an entire `line` (when no text is selected)  **CTRL + SHIFT+K**
+* `Cut` an entire `line` (when no text is selected)  **CTRL + X**
 * `Move` an entire `line`  **ALT+ARROWS**
-* `Select` the current `line`  **CTRL+L**
-* Invoke `IntelliSense`  **CTRL+SPACE**
+* `Select` the current `line`  **CTRL + L**
+* Invoke `IntelliSense`  **CTRL + SPACE**
 * `Multiple` selections (multi-cursor)  Hold **ALT** and **select**
-* Code Folding  **Ctrl+Shift+[** , **]**
+* Code `Folding`  **CTRL + Shift+[** , **]**
 * `Rename` Refactoring  **F2**
 * `Navigating` on Errors and Warnings  **F8**
 * Go to `Definition` **F12**
 
 ---
 
-## Git
+## Common Git Config
 Set **vscode** as default `merge` and `diff` tool
 ```bash
 git config --global merge.tool vscode
@@ -54,7 +56,7 @@ git config user.name mlibre
 git config --global credential.helper store
 ```
 
-## Settings
+## Settings JSON
 ```json
 {
 	"explorer.compactFolders": false,
@@ -124,11 +126,24 @@ git config --global credential.helper store
 			"path": "/usr/bin/bash",
 			"args": []
 		}
-	}
+	},
+	"cSpell.userWords": [
+		"autofetch",
+		"dbaeumer",
+		"difftool",
+		"Fullscreen",
+		"liveshare",
+		"mergetool",
+		"mlibre",
+		"monospace",
+		"nocheck",
+		"pwsh",
+		"scrollback"
+	]
 }
 ```
 
-## Eslint
+## Eslint Configuration
 ```javascript
 module.exports = {
 	"env": {
