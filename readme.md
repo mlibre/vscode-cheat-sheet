@@ -12,9 +12,7 @@ Vscode cheat sheet
 	``` 
 * Built-in `Terminal`  **CTRL + `**
 	* Select `Javascript Debug Terminal` as `Default Profile`
-* `Extensions` **CTRL + SHIFT + X** 
-	* Login to the Grammarly: `> grammarly.login`
-	* logout to the Grammarly: `> grammarly.logout`
+* `Extensions` **CTRL + SHIFT + X**
 * Closing built-in `Terminal`  **CTRL + D**
 * `Find` And `Replace`  **CTRL + F**, **CTRL + H**
 * `Find` And `Replace Globally`  **CTRL + SHIFT + F**, **CTRL + SHIFT + H**
