@@ -117,14 +117,21 @@ jobs:
 	"liveshare.authenticationProvider": "GitHub",
 	"window.zoomLevel": 2,
 	"editor.tabSize": 3,
+	"update.mode": "none",
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
 	"eslint.format.enable": true,
-	"update.mode": "none",
+	"[json]": {
+		"editor.quickSuggestions": {
+			"strings": true
+		},
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
 	"git.ignoreRebaseWarning": true,
 	"editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-	"terminal.integrated.scrollback": 5000,
+	"terminal.integrated.scrollback": 10000,
 	"terminal.integrated.defaultProfile.linux": "JavaScript Debug Terminal",
+	"terminal.integrated.persistentSessionScrollback": 1000,
 	"terminal.integrated.profiles.linux": {
 		"bash": {
 			"path": "bash",
@@ -159,18 +166,43 @@ jobs:
 			"args": []
 		}
 	},
+	"grammarly.hideUnavailablePremiumAlerts": true,
 	"cSpell.userWords": [
+		"adduser",
 		"autofetch",
+		"commandline",
+		"corsdomain",
 		"dbaeumer",
 		"difftool",
+		"fileupload",
 		"Fullscreen",
+		"geoip",
+		"Grammarly",
+		"hashex",
+		"hdwallet",
+		"healight",
+		"jshashes",
 		"liveshare",
 		"mergetool",
+		"metacoin",
+		"mforgood",
 		"mlibre",
 		"monospace",
 		"nocheck",
+		"pacman",
+		"pamac",
 		"pwsh",
-		"scrollback"
+		"rpcapi",
+		"rpccorsdomain",
+		"scrollback",
+		"signup",
+		"solcjs",
+		"stylesheet",
+		"syncmode",
+		"Syyuu",
+		"TOKENNAME",
+		"txpool",
+		"UTXOs"
 	]
 }
 ```
