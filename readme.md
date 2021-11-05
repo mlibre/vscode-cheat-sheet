@@ -92,7 +92,6 @@ jobs:
 ```json
 {
 	"explorer.compactFolders": false,
-	"workbench.activityBar.visible": false,
 	"git.pullTags": false,
 	"breadcrumbs.enabled": false,
 	"editor.minimap.enabled": false,
@@ -121,17 +120,35 @@ jobs:
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
 	"eslint.format.enable": true,
+	"git.ignoreRebaseWarning": true,
+	"editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+	"terminal.integrated.scrollback": 10000,
+	"terminal.integrated.defaultProfile.linux": "JavaScript Debug Terminal",
+	"terminal.integrated.persistentSessionScrollback": 1000,
+	"workbench.activityBar.visible": false,
 	"[json]": {
 		"editor.quickSuggestions": {
 			"strings": true
 		},
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
-	"git.ignoreRebaseWarning": true,
-	"editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-	"terminal.integrated.scrollback": 10000,
-	"terminal.integrated.defaultProfile.linux": "JavaScript Debug Terminal",
-	"terminal.integrated.persistentSessionScrollback": 1000,
+	"[solidity]": {
+		"editor.defaultFormatter": "JuanBlanco.solidity"
+	},
+	"[jsonc]": {
+		"editor.quickSuggestions": {
+			"strings": true
+		},
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"editor.inlineSuggest.enabled": true,
+	"github.copilot.enable": {
+		"*": true,
+		"yaml": false,
+		"plaintext": false,
+		"markdown": true
+	},
+	"grammarly.hideUnavailablePremiumAlerts": true,
 	"terminal.integrated.profiles.linux": {
 		"bash": {
 			"path": "bash",
@@ -166,10 +183,13 @@ jobs:
 			"args": []
 		}
 	},
-	"grammarly.hideUnavailablePremiumAlerts": true,
 	"cSpell.userWords": [
 		"adduser",
+		"allman",
 		"autofetch",
+		"bitcoinjs",
+		"blockcypher",
+		"coinjoin",
 		"commandline",
 		"corsdomain",
 		"dbaeumer",
@@ -181,9 +201,13 @@ jobs:
 		"hashex",
 		"hdwallet",
 		"healight",
+		"IPFS",
 		"jshashes",
+		"LBRY",
+		"linebreak",
 		"liveshare",
 		"mergetool",
+		"Merkle",
 		"metacoin",
 		"mforgood",
 		"mlibre",
@@ -191,7 +215,11 @@ jobs:
 		"nocheck",
 		"pacman",
 		"pamac",
+		"paren",
+		"parens",
 		"pwsh",
+		"redlist",
+		"Reiner",
 		"rpcapi",
 		"rpccorsdomain",
 		"scrollback",
@@ -201,7 +229,9 @@ jobs:
 		"syncmode",
 		"Syyuu",
 		"TOKENNAME",
+		"txid",
 		"txpool",
+		"UTXO",
 		"UTXOs"
 	]
 }
