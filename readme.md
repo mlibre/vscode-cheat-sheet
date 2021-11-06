@@ -19,6 +19,7 @@ Vscode cheat sheet
 * `Side By Side` Editing  **CTRL + \\**
 * `Fullscreen`  **F11**
 * `Markdown` Preview **CTRL + SHIFT + V**
+* Split Markdown Preview **ALT + O**
 * `Sidebar` Toggle **CTRL + B**
 * `Zoom in/out` the whole vscode **CTRL + and CTRL -**
 * `Font` size **CTRL + Mouse wheel** 
@@ -31,14 +32,56 @@ Vscode cheat sheet
 * `Cut` an entire `line` (when no text is selected)  **CTRL + X**
 * `Move` an entire `line`  **ALT+ARROWS**
 * `Select` the current `line`  **CTRL + L**
-* Invoke `IntelliSense`  **CTRL + SPACE**
+* Invoke IntelliSense  **CTRL + SPACE**
 * `Multiple` selections (multi-cursor)  Hold **ALT** and **select**
-* Code `Folding`  **CTRL + Shift+[** , **]**
+* Code Folding  **CTRL + Shift+[** , **]**
 * `Rename` Refactoring  **F2**
 * `Navigating` on Errors and Warnings  **F8**
 * Go to `Definition` **F12**
 
 ---
+
+## Keybindings
+```json
+[
+	{
+		"key": "ctrl+alt+;",
+		"command": "workbench.action.closeWindow"
+	},
+	{
+		"key": "ctrl+shift+w",
+		"command": "-workbench.action.closeWindow"
+	},
+	{
+		"key": "ctrl+alt+'",
+		"command": "workbench.action.closeActiveEditor"
+	},
+	{
+		"key": "ctrl+w",
+		"command": "-workbench.action.closeActiveEditor"
+	},
+	{
+		"key": "ctrl+alt+\\",
+		"command": "workbench.action.closeGroup",
+		"when": "activeEditorGroupEmpty && multipleEditorGroups"
+	},
+	{
+		"key": "ctrl+w",
+		"command": "-workbench.action.closeGroup",
+		"when": "activeEditorGroupEmpty && multipleEditorGroups"
+	},
+	{
+		"key": "alt+o",
+		"command": "markdown.showPreviewToSide",
+		"when": "!notebookEditorFocused && editorLangId == 'markdown'"
+	},
+	{
+		"key": "ctrl+k v",
+		"command": "-markdown.showPreviewToSide",
+		"when": "!notebookEditorFocused && editorLangId == 'markdown'"
+	}
+]
+```
 
 ## Common Git Config
 Set **vscode** as default `merge` and `diff` tool
@@ -55,13 +98,7 @@ git config user.name mlibre
 git config --global credential.helper store
 ```
 
-## Common NPM commands
-```bash
-npm adduser
-npm publish --access=public
-```
-
-## Using Github Action To Publish A Package On NPM Registry
+## Using Github Action To Publish A Package On the NPM Registry
 1. Create a NPM token: **https://www.npmjs.com/settings/mlibre/tokens/**
 2. Create a secret variable named `NPM_TOKEN` from the github repository settings: **https://github.com/mlibre/Ethereum-Smart-Contract-Deployer/settings/secrets/actions/new**
 3. Create a yml file in the repository: `.github/workflows/npm.yml`
@@ -132,14 +169,14 @@ jobs:
 		},
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
-	"[solidity]": {
-		"editor.defaultFormatter": "JuanBlanco.solidity"
-	},
 	"[jsonc]": {
 		"editor.quickSuggestions": {
 			"strings": true
 		},
 		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[solidity]": {
+		"editor.defaultFormatter": "JuanBlanco.solidity"
 	},
 	"editor.inlineSuggest.enabled": true,
 	"github.copilot.enable": {
@@ -187,6 +224,7 @@ jobs:
 		"adduser",
 		"allman",
 		"autofetch",
+		"AUTOMINE",
 		"bitcoinjs",
 		"blockcypher",
 		"coinjoin",
@@ -197,10 +235,12 @@ jobs:
 		"fileupload",
 		"Fullscreen",
 		"geoip",
+		"getfunding",
 		"Grammarly",
 		"hashex",
 		"hdwallet",
 		"healight",
+		"heartpulse",
 		"IPFS",
 		"jshashes",
 		"LBRY",
