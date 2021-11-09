@@ -5,6 +5,7 @@
   * `Git Clone`
   * `Merge`
 * `Type Checking`
+
  ```javascript
  // @ts-nocheck
  // @ts-check
@@ -134,41 +135,49 @@ jobs:
 
 ```json
 {
- "explorer.compactFolders": false,
- "git.pullTags": false,
- "breadcrumbs.enabled": false,
- "editor.minimap.enabled": false,
+ "update.mode": "none",
  "telemetry.telemetryLevel": "off",
- "workbench.enableExperiments": false,
- "extensions.autoCheckUpdates": false,
- "extensions.autoUpdate": "onlyEnabledExtensions",
- "explorer.confirmDelete": false,
- "explorer.confirmDragAndDrop": false,
- "git.confirmSync": false,
- "editor.insertSpaces": false,
- "diffEditor.ignoreTrimWhitespace": false,
- "editor.largeFileOptimizations": false,
- "git.autofetch": true,
- "git.enableSmartCommit": true,
+ "breadcrumbs.enabled": false,
  "workbench.iconTheme": "vscode-great-icons",
+ "workbench.enableExperiments": false,
+ "workbench.activityBar.visible": false,
  "window.titleBarStyle": "custom",
  "window.dialogStyle": "custom",
+ "window.zoomLevel": 2,
+ "explorer.compactFolders": false,
+ "explorer.confirmDelete": false,
+ "explorer.confirmDragAndDrop": false,
+ "editor.minimap.enabled": false,
+ "editor.largeFileOptimizations": false,
+ "editor.insertSpaces": false,
+ "editor.tabSize": 3,
+ "editor.formatOnSave": true,
+ "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+ "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Fira Code Retina'",
+ // "editor.fontFamily": "Fira Code Retina",
+ // "editor.fontLigatures": true,
+ "editor.mouseWheelZoom": true,
+ "editor.inlineSuggest.enabled": true,
+ "git.confirmSync": false,
+ "git.pullTags": false,
+ "git.autofetch": true,
+ "git.enableSmartCommit": true,
+ "git.ignoreRebaseWarning": true,
+ "diffEditor.ignoreTrimWhitespace": false,
+ "extensions.autoCheckUpdates": false,
+ "extensions.autoUpdate": "onlyEnabledExtensions",
  "eslint.codeAction.showDocumentation": {
   "enable": true
  },
- "liveshare.authenticationProvider": "GitHub",
- "window.zoomLevel": 2,
- "editor.tabSize": 3,
- "update.mode": "none",
- "editor.formatOnSave": true,
- "editor.defaultFormatter": "dbaeumer.vscode-eslint",
  "eslint.format.enable": true,
- "git.ignoreRebaseWarning": true,
- "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Fira Code Retina'",
- "terminal.integrated.scrollback": 10000,
- "terminal.integrated.defaultProfile.linux": "JavaScript Debug Terminal",
- "terminal.integrated.persistentSessionScrollback": 1000,
- "workbench.activityBar.visible": false,
+ "github.copilot.enable": {
+  "*": true,
+  "yaml": false,
+  "plaintext": false,
+  "markdown": true
+ },
+ "grammarly.hideUnavailablePremiumAlerts": true,
+ "liveshare.authenticationProvider": "GitHub",
  "[json]": {
   "editor.quickSuggestions": {
    "strings": true
@@ -191,15 +200,9 @@ jobs:
   "editor.suggest.insertMode": "replace",
   "editor.defaultFormatter": "vscode.html-language-features"
  },
- "editor.mouseWheelZoom": true,
- "editor.inlineSuggest.enabled": true,
- "github.copilot.enable": {
-  "*": true,
-  "yaml": false,
-  "plaintext": false,
-  "markdown": true
- },
- "grammarly.hideUnavailablePremiumAlerts": true,
+ "terminal.integrated.scrollback": 10000,
+ "terminal.integrated.defaultProfile.linux": "JavaScript Debug Terminal",
+ "terminal.integrated.persistentSessionScrollback": 1000,
  "terminal.integrated.profiles.linux": {
   "bash": {
    "path": "bash",
@@ -251,6 +254,7 @@ jobs:
   "dbaeumer",
   "difftool",
   "fileupload",
+  "Fira",
   "Fullscreen",
   "geoip",
   "getfunding",
