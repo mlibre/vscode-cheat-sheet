@@ -1,17 +1,17 @@
-Vscode cheat sheet
-===
+# Vscode cheat sheet
 
 * `Palette`  **CTRL + P**
 * `Command Palette`  **CTRL + SHIFT + P**
-	* `Git Clone`
-	* `Merge`
+  * `Git Clone`
+  * `Merge`
 * `Type Checking`
 	```javascript
 	// @ts-nocheck
 	// @ts-check
-	``` 
+	```
+
 * Built-in `Terminal`  **CTRL + `**
-	* Select `Javascript Debug Terminal` as `Default Profile`
+  * Select `Javascript Debug Terminal` as `Default Profile`
 * `Extensions` **CTRL + SHIFT + X**
 * Closing built-in `Terminal`  **CTRL + D**
 * `Find` And `Replace`  **CTRL + F**, **CTRL + H**
@@ -22,11 +22,12 @@ Vscode cheat sheet
 * Split Markdown Preview **ALT + O**
 * `Sidebar` Toggle **CTRL + B**
 * `Zoom in/out` the whole vscode **CTRL + and CTRL -**
-* `Font` size **CTRL + Mouse wheel** 
+* `Font` size **CTRL + Mouse wheel**
 
 ---
 
 ## Editor Shortcuts
+
 * `Copy` an entire `line` (when no text is selected)  **CTRL + C**
 * `Delete` an entire `line` (when no text is selected)  **CTRL + SHIFT+K**
 * `Cut` an entire `line` (when no text is selected)  **CTRL + X**
@@ -42,49 +43,52 @@ Vscode cheat sheet
 ---
 
 ## Keybindings
+
 ```json
 [
-	{
-		"key": "ctrl+alt+;",
-		"command": "workbench.action.closeWindow"
-	},
-	{
-		"key": "ctrl+shift+w",
-		"command": "-workbench.action.closeWindow"
-	},
-	{
-		"key": "ctrl+alt+'",
-		"command": "workbench.action.closeActiveEditor"
-	},
-	{
-		"key": "ctrl+w",
-		"command": "-workbench.action.closeActiveEditor"
-	},
-	{
-		"key": "ctrl+alt+\\",
-		"command": "workbench.action.closeGroup",
-		"when": "activeEditorGroupEmpty && multipleEditorGroups"
-	},
-	{
-		"key": "ctrl+w",
-		"command": "-workbench.action.closeGroup",
-		"when": "activeEditorGroupEmpty && multipleEditorGroups"
-	},
-	{
-		"key": "alt+o",
-		"command": "markdown.showPreviewToSide",
-		"when": "!notebookEditorFocused && editorLangId == 'markdown'"
-	},
-	{
-		"key": "ctrl+k v",
-		"command": "-markdown.showPreviewToSide",
-		"when": "!notebookEditorFocused && editorLangId == 'markdown'"
-	}
+ {
+  "key": "ctrl+alt+;",
+  "command": "workbench.action.closeWindow"
+ },
+ {
+  "key": "ctrl+shift+w",
+  "command": "-workbench.action.closeWindow"
+ },
+ {
+  "key": "ctrl+alt+'",
+  "command": "workbench.action.closeActiveEditor"
+ },
+ {
+  "key": "ctrl+w",
+  "command": "-workbench.action.closeActiveEditor"
+ },
+ {
+  "key": "ctrl+alt+\\",
+  "command": "workbench.action.closeGroup",
+  "when": "activeEditorGroupEmpty && multipleEditorGroups"
+ },
+ {
+  "key": "ctrl+w",
+  "command": "-workbench.action.closeGroup",
+  "when": "activeEditorGroupEmpty && multipleEditorGroups"
+ },
+ {
+  "key": "alt+o",
+  "command": "markdown.showPreviewToSide",
+  "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+ },
+ {
+  "key": "ctrl+k v",
+  "command": "-markdown.showPreviewToSide",
+  "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+ }
 ]
 ```
 
 ## Common Git Config
+
 Set **vscode** as default `merge` and `diff` tool
+
 ```bash
 git config --global merge.tool vscode
 git config --global mergetool.vscode.cmd 'code --wait $MERGED'
@@ -99,9 +103,11 @@ git config --global credential.helper store
 ```
 
 ## Using Github Action To Publish A Package On the NPM Registry
-1. Create a NPM token: **https://www.npmjs.com/settings/mlibre/tokens/**
-2. Create a secret variable named `NPM_TOKEN` from the github repository settings: **https://github.com/mlibre/Ethereum-Smart-Contract-Deployer/settings/secrets/actions/new**
+
+1. Create a NPM token: **<https://www.npmjs.com/settings/mlibre/tokens/>**
+2. Create a secret variable named `NPM_TOKEN` from the github repository settings: **<https://github.com/mlibre/Ethereum-Smart-Contract-Deployer/settings/secrets/actions/new>**
 3. Create a yml file in the repository: `.github/workflows/npm.yml`
+
 ```yml
 name: Publish on NPM registry
 
@@ -124,8 +130,8 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 ```
 
-
 ## Settings JSON
+
 ```json
 {
 	"explorer.compactFolders": false,
@@ -158,7 +164,7 @@ jobs:
 	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
 	"eslint.format.enable": true,
 	"git.ignoreRebaseWarning": true,
-	"editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+	"editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Fira Code Retina'",
 	"terminal.integrated.scrollback": 10000,
 	"terminal.integrated.defaultProfile.linux": "JavaScript Debug Terminal",
 	"terminal.integrated.persistentSessionScrollback": 1000,
@@ -178,6 +184,14 @@ jobs:
 	"[solidity]": {
 		"editor.defaultFormatter": "JuanBlanco.solidity"
 	},
+	"[javascript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[html]": {
+		"editor.suggest.insertMode": "replace",
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"editor.mouseWheelZoom": true,
 	"editor.inlineSuggest.enabled": true,
 	"github.copilot.enable": {
 		"*": true,
@@ -225,11 +239,15 @@ jobs:
 		"allman",
 		"autofetch",
 		"AUTOMINE",
+		"Autostarts",
 		"bitcoinjs",
 		"blockcypher",
+		"Claimtrie",
+		"cname",
 		"coinjoin",
 		"commandline",
 		"corsdomain",
+		"Datahub",
 		"dbaeumer",
 		"difftool",
 		"fileupload",
@@ -242,16 +260,25 @@ jobs:
 		"healight",
 		"heartpulse",
 		"IPFS",
+		"JOSN",
 		"jshashes",
 		"LBRY",
+		"lbrynet",
 		"linebreak",
 		"liveshare",
+		"mainchain",
+		"maticjs",
+		"maticnetwork",
 		"mergetool",
 		"Merkle",
 		"metacoin",
 		"mforgood",
+		"mkdir",
 		"mlibre",
+		"monero",
 		"monospace",
+		"nameserver",
+		"newbot",
 		"nocheck",
 		"pacman",
 		"pamac",
@@ -260,6 +287,8 @@ jobs:
 		"pwsh",
 		"redlist",
 		"Reiner",
+		"reposted",
+		"resolv",
 		"rpcapi",
 		"rpccorsdomain",
 		"scrollback",
@@ -268,175 +297,180 @@ jobs:
 		"stylesheet",
 		"syncmode",
 		"Syyuu",
+		"tmpfs",
 		"TOKENNAME",
+		"Tradingview",
 		"txid",
 		"txpool",
+		"usermod",
 		"UTXO",
-		"UTXOs"
+		"UTXOs",
+		"xrandr"
 	]
 }
 ```
 
 ## Eslint Configuration
+
 ```javascript
 module.exports = {
-	"env": {
-		"commonjs": true,
-		"es2021": true,
-		"node": true,
-		"mocha": true
-	},
-	"extends": [
-		"eslint:recommended",
-		"plugin:node/recommended"
-	],
-	"parserOptions": {
-		"ecmaVersion": 12,
-		"impliedStrict": true
-	},
-	"rules": {
-		"linebreak-style": [
-			"error",
-			"unix"
-		],
-		"quotes": [
-			"error",
-			"double"
-		],
-		"semi": [
-			"error",
-			"always"
-		],
-		"one-var": [
-			"error",
-			"never"
-		],
-		"brace-style": [
-			"error",
-			"allman",
-			{
-				"allowSingleLine": true
-			}
-		],
-		// "arrow-parens": [
-		// 	"error",
-		// 	"always"
-		// ],
-		"arrow-body-style": [
-			"error",
-			"always"
-		],
-		"no-template-curly-in-string": [
-			"error"
-		],
-		"prefer-const": [
-			"error",
-			{
-				"destructuring": "any",
-				"ignoreReadBeforeAssign": false
-			}
-		],
-		"no-new-object": [
-			"error",
-		],
-		"no-extra-parens": [
-			"error",
-			"all",
-			{
-				"conditionalAssign": false
-			}
-		],
-		"no-empty-function": [
-			"error",
-		],
-		"no-empty": [
-			"warn",
-			{ 
-				"allowEmptyCatch": true
-			}
-		],
-		"no-eq-null": [
-			"error",
-		],
-		"no-extra-bind": [
-			"error",
-		],
-		"no-self-compare": [
-			"error",
-		],
-		"no-useless-call": [
-			"error",
-		],
-		"no-undefined": [
-			"error",
-		],
-		"no-undef": [
-			"warn",
-		],
-		"no-array-constructor": [
-			"error",
-		],
-		"prefer-destructuring": [
-			"error", {
-				"VariableDeclarator": {
-					"array": true,
-					"object": true
-				},
-				"AssignmentExpression": {
-					"array": false,
-					"object": false
-				}
-			},
-			{
-				"enforceForRenamedProperties": false
-			}
-		],
-		"object-shorthand": [
-			"warn",
-		],
-		"prefer-spread": [
-			"warn",
-		],
-		"prefer-template": [
-			"warn",
-		],
-		"no-loop-func": [
-			"warn",
-		],
-		"prefer-rest-params": [
-			"warn",
-		],
-		"no-new-func": [
-			"warn",
-		],
-		"space-before-blocks": [
-			"warn",
-		],
-		"space-before-function-paren": ["error", "always"],
-		"keyword-spacing": [
-			"error"
-		],
-		// "func-call-spacing": [
-		// 	"error", "always"
-		// ],
-		"function-paren-newline": [
-			"warn",
-		],
-		"no-unneeded-ternary": [
-			"warn",
-		],
-		"no-process-exit": "off",
-		"require-await": "warn",
-		"indent": [
-			"error",
-			"tab", 
-			{
-				"MemberExpression": 0
-			}
-		],
-		"no-tabs": 0,
-		"node/no-unpublished-import": "off",
-		"node/no-unpublished-require": "off"
-	}
+ "env": {
+  "commonjs": true,
+  "es2021": true,
+  "node": true,
+  "mocha": true
+ },
+ "extends": [
+  "eslint:recommended",
+  "plugin:node/recommended"
+ ],
+ "parserOptions": {
+  "ecmaVersion": 12,
+  "impliedStrict": true
+ },
+ "rules": {
+  "linebreak-style": [
+   "error",
+   "unix"
+  ],
+  "quotes": [
+   "error",
+   "double"
+  ],
+  "semi": [
+   "error",
+   "always"
+  ],
+  "one-var": [
+   "error",
+   "never"
+  ],
+  "brace-style": [
+   "error",
+   "allman",
+   {
+    "allowSingleLine": true
+   }
+  ],
+  // "arrow-parens": [
+  //  "error",
+  //  "always"
+  // ],
+  "arrow-body-style": [
+   "error",
+   "always"
+  ],
+  "no-template-curly-in-string": [
+   "error"
+  ],
+  "prefer-const": [
+   "error",
+   {
+    "destructuring": "any",
+    "ignoreReadBeforeAssign": false
+   }
+  ],
+  "no-new-object": [
+   "error",
+  ],
+  "no-extra-parens": [
+   "error",
+   "all",
+   {
+    "conditionalAssign": false
+   }
+  ],
+  "no-empty-function": [
+   "error",
+  ],
+  "no-empty": [
+   "warn",
+   { 
+    "allowEmptyCatch": true
+   }
+  ],
+  "no-eq-null": [
+   "error",
+  ],
+  "no-extra-bind": [
+   "error",
+  ],
+  "no-self-compare": [
+   "error",
+  ],
+  "no-useless-call": [
+   "error",
+  ],
+  "no-undefined": [
+   "error",
+  ],
+  "no-undef": [
+   "warn",
+  ],
+  "no-array-constructor": [
+   "error",
+  ],
+  "prefer-destructuring": [
+   "error", {
+    "VariableDeclarator": {
+     "array": true,
+     "object": true
+    },
+    "AssignmentExpression": {
+     "array": false,
+     "object": false
+    }
+   },
+   {
+    "enforceForRenamedProperties": false
+   }
+  ],
+  "object-shorthand": [
+   "warn",
+  ],
+  "prefer-spread": [
+   "warn",
+  ],
+  "prefer-template": [
+   "warn",
+  ],
+  "no-loop-func": [
+   "warn",
+  ],
+  "prefer-rest-params": [
+   "warn",
+  ],
+  "no-new-func": [
+   "warn",
+  ],
+  "space-before-blocks": [
+   "warn",
+  ],
+  "space-before-function-paren": ["error", "always"],
+  "keyword-spacing": [
+   "error"
+  ],
+  // "func-call-spacing": [
+  //  "error", "always"
+  // ],
+  "function-paren-newline": [
+   "warn",
+  ],
+  "no-unneeded-ternary": [
+   "warn",
+  ],
+  "no-process-exit": "off",
+  "require-await": "warn",
+  "indent": [
+   "error",
+   "tab", 
+   {
+    "MemberExpression": 0
+   }
+  ],
+  "no-tabs": 0,
+  "node/no-unpublished-import": "off",
+  "node/no-unpublished-require": "off"
+ }
 };
 ```
