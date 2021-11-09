@@ -5,10 +5,10 @@
   * `Git Clone`
   * `Merge`
 * `Type Checking`
-	```javascript
-	// @ts-nocheck
-	// @ts-check
-	```
+ ```javascript
+ // @ts-nocheck
+ // @ts-check
+ ```
 
 * Built-in `Terminal`  **CTRL + `**
   * Select `Javascript Debug Terminal` as `Default Profile`
@@ -134,179 +134,179 @@ jobs:
 
 ```json
 {
-	"explorer.compactFolders": false,
-	"git.pullTags": false,
-	"breadcrumbs.enabled": false,
-	"editor.minimap.enabled": false,
-	"telemetry.telemetryLevel": "off",
-	"workbench.enableExperiments": false,
-	"extensions.autoCheckUpdates": false,
-	"extensions.autoUpdate": "onlyEnabledExtensions",
-	"explorer.confirmDelete": false,
-	"explorer.confirmDragAndDrop": false,
-	"git.confirmSync": false,
-	"editor.insertSpaces": false,
-	"diffEditor.ignoreTrimWhitespace": false,
-	"editor.largeFileOptimizations": false,
-	"git.autofetch": true,
-	"git.enableSmartCommit": true,
-	"workbench.iconTheme": "vscode-great-icons",
-	"window.titleBarStyle": "custom",
-	"window.dialogStyle": "custom",
-	"eslint.codeAction.showDocumentation": {
-		"enable": true
-	},
-	"liveshare.authenticationProvider": "GitHub",
-	"window.zoomLevel": 2,
-	"editor.tabSize": 3,
-	"update.mode": "none",
-	"editor.formatOnSave": true,
-	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
-	"eslint.format.enable": true,
-	"git.ignoreRebaseWarning": true,
-	"editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Fira Code Retina'",
-	"terminal.integrated.scrollback": 10000,
-	"terminal.integrated.defaultProfile.linux": "JavaScript Debug Terminal",
-	"terminal.integrated.persistentSessionScrollback": 1000,
-	"workbench.activityBar.visible": false,
-	"[json]": {
-		"editor.quickSuggestions": {
-			"strings": true
-		},
-		"editor.defaultFormatter": "vscode.json-language-features"
-	},
-	"[jsonc]": {
-		"editor.quickSuggestions": {
-			"strings": true
-		},
-		"editor.defaultFormatter": "vscode.json-language-features"
-	},
-	"[solidity]": {
-		"editor.defaultFormatter": "JuanBlanco.solidity"
-	},
-	"[javascript]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
-	},
-	"[html]": {
-		"editor.suggest.insertMode": "replace",
-		"editor.defaultFormatter": "vscode.html-language-features"
-	},
-	"editor.mouseWheelZoom": true,
-	"editor.inlineSuggest.enabled": true,
-	"github.copilot.enable": {
-		"*": true,
-		"yaml": false,
-		"plaintext": false,
-		"markdown": true
-	},
-	"grammarly.hideUnavailablePremiumAlerts": true,
-	"terminal.integrated.profiles.linux": {
-		"bash": {
-			"path": "bash",
-			"icon": "terminal-bash"
-		},
-		"zsh": {
-			"path": "zsh"
-		},
-		"fish": {
-			"path": "fish"
-		},
-		"tmux": {
-			"path": "tmux",
-			"icon": "terminal-tmux"
-		},
-		"pwsh": {
-			"path": "pwsh",
-			"icon": "terminal-powershell"
-		},
-		"JavaScript Debug Terminal": {
-			"extensionIdentifier": "ms-vscode.js-debug",
-			"icon": "debug",
-			"id": "extension.js-debug.debugTerminal",
-			"title": "JavaScript Debug Terminal"
-		},
-		"bash (migrated)": {
-			"path": "bash",
-			"args": []
-		},
-		"/usr/bin/bash (migrated)": {
-			"path": "/usr/bin/bash",
-			"args": []
-		}
-	},
-	"cSpell.userWords": [
-		"adduser",
-		"allman",
-		"autofetch",
-		"AUTOMINE",
-		"Autostarts",
-		"bitcoinjs",
-		"blockcypher",
-		"Claimtrie",
-		"cname",
-		"coinjoin",
-		"commandline",
-		"corsdomain",
-		"Datahub",
-		"dbaeumer",
-		"difftool",
-		"fileupload",
-		"Fullscreen",
-		"geoip",
-		"getfunding",
-		"Grammarly",
-		"hashex",
-		"hdwallet",
-		"healight",
-		"heartpulse",
-		"IPFS",
-		"JOSN",
-		"jshashes",
-		"LBRY",
-		"lbrynet",
-		"linebreak",
-		"liveshare",
-		"mainchain",
-		"maticjs",
-		"maticnetwork",
-		"mergetool",
-		"Merkle",
-		"metacoin",
-		"mforgood",
-		"mkdir",
-		"mlibre",
-		"monero",
-		"monospace",
-		"nameserver",
-		"newbot",
-		"nocheck",
-		"pacman",
-		"pamac",
-		"paren",
-		"parens",
-		"pwsh",
-		"redlist",
-		"Reiner",
-		"reposted",
-		"resolv",
-		"rpcapi",
-		"rpccorsdomain",
-		"scrollback",
-		"signup",
-		"solcjs",
-		"stylesheet",
-		"syncmode",
-		"Syyuu",
-		"tmpfs",
-		"TOKENNAME",
-		"Tradingview",
-		"txid",
-		"txpool",
-		"usermod",
-		"UTXO",
-		"UTXOs",
-		"xrandr"
-	]
+ "explorer.compactFolders": false,
+ "git.pullTags": false,
+ "breadcrumbs.enabled": false,
+ "editor.minimap.enabled": false,
+ "telemetry.telemetryLevel": "off",
+ "workbench.enableExperiments": false,
+ "extensions.autoCheckUpdates": false,
+ "extensions.autoUpdate": "onlyEnabledExtensions",
+ "explorer.confirmDelete": false,
+ "explorer.confirmDragAndDrop": false,
+ "git.confirmSync": false,
+ "editor.insertSpaces": false,
+ "diffEditor.ignoreTrimWhitespace": false,
+ "editor.largeFileOptimizations": false,
+ "git.autofetch": true,
+ "git.enableSmartCommit": true,
+ "workbench.iconTheme": "vscode-great-icons",
+ "window.titleBarStyle": "custom",
+ "window.dialogStyle": "custom",
+ "eslint.codeAction.showDocumentation": {
+  "enable": true
+ },
+ "liveshare.authenticationProvider": "GitHub",
+ "window.zoomLevel": 2,
+ "editor.tabSize": 3,
+ "update.mode": "none",
+ "editor.formatOnSave": true,
+ "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+ "eslint.format.enable": true,
+ "git.ignoreRebaseWarning": true,
+ "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Fira Code Retina'",
+ "terminal.integrated.scrollback": 10000,
+ "terminal.integrated.defaultProfile.linux": "JavaScript Debug Terminal",
+ "terminal.integrated.persistentSessionScrollback": 1000,
+ "workbench.activityBar.visible": false,
+ "[json]": {
+  "editor.quickSuggestions": {
+   "strings": true
+  },
+  "editor.defaultFormatter": "vscode.json-language-features"
+ },
+ "[jsonc]": {
+  "editor.quickSuggestions": {
+   "strings": true
+  },
+  "editor.defaultFormatter": "vscode.json-language-features"
+ },
+ "[solidity]": {
+  "editor.defaultFormatter": "JuanBlanco.solidity"
+ },
+ "[javascript]": {
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+ },
+ "[html]": {
+  "editor.suggest.insertMode": "replace",
+  "editor.defaultFormatter": "vscode.html-language-features"
+ },
+ "editor.mouseWheelZoom": true,
+ "editor.inlineSuggest.enabled": true,
+ "github.copilot.enable": {
+  "*": true,
+  "yaml": false,
+  "plaintext": false,
+  "markdown": true
+ },
+ "grammarly.hideUnavailablePremiumAlerts": true,
+ "terminal.integrated.profiles.linux": {
+  "bash": {
+   "path": "bash",
+   "icon": "terminal-bash"
+  },
+  "zsh": {
+   "path": "zsh"
+  },
+  "fish": {
+   "path": "fish"
+  },
+  "tmux": {
+   "path": "tmux",
+   "icon": "terminal-tmux"
+  },
+  "pwsh": {
+   "path": "pwsh",
+   "icon": "terminal-powershell"
+  },
+  "JavaScript Debug Terminal": {
+   "extensionIdentifier": "ms-vscode.js-debug",
+   "icon": "debug",
+   "id": "extension.js-debug.debugTerminal",
+   "title": "JavaScript Debug Terminal"
+  },
+  "bash (migrated)": {
+   "path": "bash",
+   "args": []
+  },
+  "/usr/bin/bash (migrated)": {
+   "path": "/usr/bin/bash",
+   "args": []
+  }
+ },
+ "cSpell.userWords": [
+  "adduser",
+  "allman",
+  "autofetch",
+  "AUTOMINE",
+  "Autostarts",
+  "bitcoinjs",
+  "blockcypher",
+  "Claimtrie",
+  "cname",
+  "coinjoin",
+  "commandline",
+  "corsdomain",
+  "Datahub",
+  "dbaeumer",
+  "difftool",
+  "fileupload",
+  "Fullscreen",
+  "geoip",
+  "getfunding",
+  "Grammarly",
+  "hashex",
+  "hdwallet",
+  "healight",
+  "heartpulse",
+  "IPFS",
+  "JOSN",
+  "jshashes",
+  "LBRY",
+  "lbrynet",
+  "linebreak",
+  "liveshare",
+  "mainchain",
+  "maticjs",
+  "maticnetwork",
+  "mergetool",
+  "Merkle",
+  "metacoin",
+  "mforgood",
+  "mkdir",
+  "mlibre",
+  "monero",
+  "monospace",
+  "nameserver",
+  "newbot",
+  "nocheck",
+  "pacman",
+  "pamac",
+  "paren",
+  "parens",
+  "pwsh",
+  "redlist",
+  "Reiner",
+  "reposted",
+  "resolv",
+  "rpcapi",
+  "rpccorsdomain",
+  "scrollback",
+  "signup",
+  "solcjs",
+  "stylesheet",
+  "syncmode",
+  "Syyuu",
+  "tmpfs",
+  "TOKENNAME",
+  "Tradingview",
+  "txid",
+  "txpool",
+  "usermod",
+  "UTXO",
+  "UTXOs",
+  "xrandr"
+ ]
 }
 ```
 
