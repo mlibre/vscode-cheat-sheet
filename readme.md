@@ -131,6 +131,24 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 ```
 
+## Cleaning NPM Cache
+
+```bash
+rm -r node_modules/
+npm cache clean --force
+sudo npm cache clean --force -g
+sudo pacman -R nodejs-lts-fermium npm
+# sudo pacman -R nodejs npm
+sudo rm -r ~/.npm
+rm -r ~/.node-gyp/
+rm -r .cache/node-gyp/
+sudo rm -r /usr/local/lib/node_modules/
+sudo rm -r /usr/lib/node_modules/
+sudo pacman -S nodejs-lts-fermium npm
+# sudo pacman -S nodejs npm
+# Restart the OS
+```
+
 ## Settings JSON
 
 ```json
