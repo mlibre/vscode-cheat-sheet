@@ -103,11 +103,13 @@ git config user.name mlibre
 git config --global credential.helper store
 ```
 
-## Using Github Action To Publish A Package On the NPM Registry
+## Github Actions
 
-1. Create a NPM token: **<https://www.npmjs.com/settings/mlibre/tokens/>**
-2. Create a secret variable named `NPM_TOKEN` from the github repository settings: **<https://github.com/mlibre/Ethereum-Smart-Contract-Deployer/settings/secrets/actions/new>**
-3. Create a yml file in the repository: `.github/workflows/npm.yml`
+### Publish A Package On the NPM Registry
+
+1. Create an NPM token: **<https://www.npmjs.com/settings/mlibre/tokens/>**
+2. Create a secret variable named `NPM_TOKEN` from the Github repository settings: **<https://github.com/mlibre/Ethereum-Smart-Contract-Deployer/settings/secrets/actions/new>**
+3. Create a `yml` file in the repository: `.github/workflows/npm.yml`
 
 ```yml
 name: Publish on NPM registry
@@ -125,10 +127,42 @@ jobs:
         with:
           node-version: 14.x
           registry-url: https://registry.npmjs.org/
-      # - run: npm install
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+```
+
+### Bundling and Committing a Node Module using Browserify
+
+Create a yml file in the repository: `.github/workflows/browserify.yml`
+
+```yml
+name: Browserify Bundle
+
+on:
+  push:
+    branches: ['master']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          registry-url: https://registry.npmjs.org/
+      # - run: npm install
+      - run: npm install
+      - run: npm install -g browserify
+      - run: browserify -r ./main.js:EthereumTokens -o ./web/bundle.js
+      - run: |
+          git config --global user.name 'mlibre'
+          git config --global user.email 'm.gh@linuxmail.org'
+          git add web
+          git commit -am "Automated bundle"
+          git push
+
 ```
 
 ## Cleaning NPM Cache
