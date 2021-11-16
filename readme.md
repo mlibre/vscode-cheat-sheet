@@ -1,45 +1,76 @@
 # Vscode cheat sheet
 
-* `Palette`  **CTRL + P**
-* `Command Palette`  **CTRL + SHIFT + P**
-  * `Git Clone`
-  * `Merge`
-* `Type Checking`
+A cheat sheet for Vscode.
+
+- [Vscode](#vscode)
+- [Extensions](#extensions)
+- [Editor Shortcuts](#editor-shortcuts)
+- [Keybindings](#keybindings)
+- [Common Git Config](#common-git-config)
+- [Github Actions](#github-actions)
+  - [Publish A Package On the NPM Registry](#publish-a-package-on-the-npm-registry)
+  - [Bundling and Committing a Node Module using Browserify](#bundling-and-committing-a-node-module-using-browserify)
+- [Cleaning NPM Cache](#cleaning-npm-cache)
+- [Settings JSON](#settings-json)
+- [Eslint Configuration](#eslint-configuration)
+
+## Vscode
+
+- `Palette`  **CTRL + P**
+- `Command Palette`  **CTRL + SHIFT + P**
+  - `Git Clone`
+  - `Merge`
+- `Type Checking`
 
  ```javascript
  // @ts-nocheck
  // @ts-check
  ```
 
-* Built-in `Terminal`  **CTRL + `**
-  * Select `Javascript Debug Terminal` as `Default Profile`
-* `Extensions` **CTRL + SHIFT + X**
-* Closing built-in `Terminal`  **CTRL + D**
-* `Find` And `Replace`  **CTRL + F**, **CTRL + H**
-* `Find` And `Replace Globally`  **CTRL + SHIFT + F**, **CTRL + SHIFT + H**
-* `Side By Side` Editing  **CTRL + \\**
-* `Fullscreen`  **F11**
-* `Markdown` Preview **CTRL + SHIFT + V**
-* Split Markdown Preview **ALT + O**
-* `Sidebar` Toggle **CTRL + B**
-* `Zoom in/out` the whole vscode **CTRL + and CTRL -**
-* `Font` size **CTRL + Mouse wheel**
+- Built-in `Terminal`  **CTRL + `**
+  - Select `Javascript Debug Terminal` as `Default Profile`
+- `Extensions` **CTRL + SHIFT + X**
+- Closing built-in `Terminal`  **CTRL + D**
+- `Find` And `Replace`  **CTRL + F**, **CTRL + H**
+- `Find` And `Replace Globally`  **CTRL + SHIFT + F**, **CTRL + SHIFT + H**
+- `Side By Side` Editing  **CTRL + \\**
+- `Fullscreen`  **F11**
+- `Markdown` Preview **CTRL + SHIFT + V**
+- Split Markdown Preview **ALT + O**
+- `Sidebar` Toggle **CTRL + B**
+- `Zoom in/out` the whole vscode **CTRL + and CTRL -**
+- `Font` size **CTRL + Mouse wheel**
 
 ---
 
+## Extensions
+
+- yzhang.markdown-all-in-one
+  - Run command `Create Table of Contents` to insert a new table of contents.
+- DavidAnson.vscode-markdownlint
+- dbaeumer.vscode-eslint
+- streetsidesoftware.code-spell-checker
+- emmanuelbeziat.vscode-great-icons
+- rangav.vscode-thunder-client
+- GitHub.copilot
+- JuanBlanco.solidity
+- ms-vscode-remote.remote-containers
+- ms-vscode-remote.remote-ssh
+- ms-vscode-remote.remote-ssh-edit
+
 ## Editor Shortcuts
 
-* `Copy` an entire `line` (when no text is selected)  **CTRL + C**
-* `Delete` an entire `line` (when no text is selected)  **CTRL + SHIFT+K**
-* `Cut` an entire `line` (when no text is selected)  **CTRL + X**
-* `Move` an entire `line`  **ALT+ARROWS**
-* `Select` the current `line`  **CTRL + L**
-* Invoke IntelliSense  **CTRL + SPACE**
-* `Multiple` selections (multi-cursor)  Hold **ALT** and **select**
-* Code Folding  **CTRL + Shift+[** , **]**
-* `Rename` Refactoring  **F2**
-* `Navigating` on Errors and Warnings  **F8**
-* Go to `Definition` **F12**
+- `Copy` an entire `line` (when no text is selected)  **CTRL + C**
+- `Delete` an entire `line` (when no text is selected)  **CTRL + SHIFT+K**
+- `Cut` an entire `line` (when no text is selected)  **CTRL + X**
+- `Move` an entire `line`  **ALT+ARROWS**
+- `Select` the current `line`  **CTRL + L**
+- Invoke IntelliSense  **CTRL + SPACE**
+- `Multiple` selections (multi-cursor)  Hold **ALT** and **select**
+- Code Folding  **CTRL + Shift+[** , **]**
+- `Rename` Refactoring  **F2**
+- `Navigating` on Errors and Warnings  **F8**
+- Go to `Definition` **F12**
 
 ---
 
@@ -82,6 +113,16 @@
   "key": "ctrl+k v",
   "command": "-markdown.showPreviewToSide",
   "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+ },
+ {
+  "key": "ctrl+alt+tab",
+  "command": "markdown.extension.onTabKey",
+  "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus && !hasOtherSuggestions && !hasSnippetCompletions && !inSnippetMode && !suggestWidgetVisible && editorLangId == 'markdown'"
+ },
+ {
+  "key": "tab",
+  "command": "-markdown.extension.onTabKey",
+  "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus && !hasOtherSuggestions && !hasSnippetCompletions && !inSnippetMode && !suggestWidgetVisible && editorLangId == 'markdown'"
  }
 ]
 ```
@@ -199,6 +240,8 @@ sudo pacman -S nodejs-lts-fermium npm
  "explorer.compactFolders": false,
  "explorer.confirmDelete": false,
  "explorer.confirmDragAndDrop": false,
+ "explorer.autoReveal": false,
+ "editor.maxTokenizationLineLength": 20000,
  "editor.minimap.enabled": false,
  "editor.largeFileOptimizations": false,
  "editor.insertSpaces": false,
@@ -218,18 +261,18 @@ sudo pacman -S nodejs-lts-fermium npm
  "diffEditor.ignoreTrimWhitespace": false,
  "extensions.autoCheckUpdates": false,
  "extensions.autoUpdate": "onlyEnabledExtensions",
+ "markdown.extension.toc.updateOnSave": false,
+ "markdown.extension.completion.respectVscodeSearchExclude": true,
  "eslint.codeAction.showDocumentation": {
   "enable": true
  },
  "eslint.format.enable": true,
  "github.copilot.enable": {
   "*": true,
-  "yaml": false,
+  "yaml": true,
   "plaintext": false,
   "markdown": true
  },
- "grammarly.hideUnavailablePremiumAlerts": true,
- "liveshare.authenticationProvider": "GitHub",
  "[json]": {
   "editor.quickSuggestions": {
    "strings": true
