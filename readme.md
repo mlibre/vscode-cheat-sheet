@@ -263,6 +263,7 @@ sudo pacman -S nodejs-lts-fermium npm
  "extensions.autoUpdate": "onlyEnabledExtensions",
  "markdown.extension.toc.updateOnSave": false,
  "markdown.extension.completion.respectVscodeSearchExclude": true,
+ "markdown.extension.syntax.decorations": false,
  "eslint.codeAction.showDocumentation": {
   "enable": true
  },
