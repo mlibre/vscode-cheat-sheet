@@ -123,6 +123,24 @@ A cheat sheet for Vscode.
   "key": "tab",
   "command": "-markdown.extension.onTabKey",
   "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus && !hasOtherSuggestions && !hasSnippetCompletions && !inSnippetMode && !suggestWidgetVisible && editorLangId == 'markdown'"
+ },
+ {
+  "key": "ctrl+t ctrl+r",
+  "command": "workbench.action.tasks.build"
+ },
+ {
+  "key": "ctrl+shift+b",
+  "command": "-workbench.action.tasks.build"
+ },
+ {
+  "key": "ctrl+shift+b",
+  "command": "markdown.extension.editing.toggleBold",
+  "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+ },
+ {
+  "key": "ctrl+b",
+  "command": "-markdown.extension.editing.toggleBold",
+  "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
  }
 ]
 ```
