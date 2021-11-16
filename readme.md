@@ -296,6 +296,9 @@ sudo pacman -S nodejs-lts-fermium npm
   "editor.suggest.insertMode": "replace",
   "editor.defaultFormatter": "vscode.html-language-features"
  },
+ "[markdown]": {
+  "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+ },
  "terminal.integrated.scrollback": 10000,
  "terminal.integrated.defaultProfile.linux": "JavaScript Debug Terminal",
  "terminal.integrated.persistentSessionScrollback": 1000,
