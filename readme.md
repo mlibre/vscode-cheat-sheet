@@ -47,13 +47,14 @@ A cheat sheet for Vscode.
 
 - yzhang.markdown-all-in-one
   - Run command `Create Table of Contents` to insert a new table of contents.
-- DavidAnson.vscode-markdownlint
 - dbaeumer.vscode-eslint
 - streetsidesoftware.code-spell-checker
 - emmanuelbeziat.vscode-great-icons
 - rangav.vscode-thunder-client
 - GitHub.copilot
 - JuanBlanco.solidity
+- davidanson.vscode-markdownlint
+- bungcip.better-toml
 - ms-vscode-remote.remote-containers
 - ms-vscode-remote.remote-ssh
 - ms-vscode-remote.remote-ssh-edit
