@@ -36,10 +36,11 @@ A cheat sheet for Vscode.
 - `Side By Side` Editing  **CTRL + \\**
 - `Fullscreen`  **F11**
 - `Markdown` Preview **CTRL + SHIFT + V**
-- Split Markdown Preview **ALT + O**
+- `Split Markdown` Preview **ALT + O**
 - `Sidebar` Toggle **CTRL + B**
 - `Zoom in/out` the whole vscode **CTRL + and CTRL -**
 - `Font` size **CTRL + Mouse wheel**
+- `Fast Scrolling` **ALT + Mouse wheel**
 
 ---
 
@@ -265,14 +266,17 @@ sudo pacman -S nodejs-lts-fermium npm
  "editor.largeFileOptimizations": false,
  "editor.insertSpaces": false,
  "editor.tabSize": 3,
- "editor.formatOnSave": true,
  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
  "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'Fira Code Retina'",
- "debug.javascript.suggestPrettyPrinting": false,
  // "editor.fontFamily": "Fira Code Retina",
  // "editor.fontLigatures": true,
  "editor.mouseWheelZoom": true,
  "editor.inlineSuggest.enabled": true,
+ "editor.formatOnSave": true,
+ "editor.accessibilitySupport": "off",
+ "editor.copyWithSyntaxHighlighting": false,
+ "debug.javascript.suggestPrettyPrinting": false,
+ "javascript.validate.enable": false,
  "git.confirmSync": false,
  "git.pullTags": false,
  "git.autofetch": true,
@@ -356,12 +360,21 @@ sudo pacman -S nodejs-lts-fermium npm
    "args": []
   }
  },
+ "editor.unicodeHighlight.allowedCharacters": {
+  "ا": true,
+  "ه": true,
+  "‌": true,
+  "۰": true,
+  "۵": true
+ },
  "cSpell.userWords": [
   "adduser",
   "allman",
   "alloc",
+  "AMDGPU",
   "autofetch",
   "AUTOMINE",
+  "Automount",
   "Autostarts",
   "bindgen",
   "bitcoinjs",
@@ -369,6 +382,7 @@ sudo pacman -S nodejs-lts-fermium npm
   "borsh",
   "browserslist",
   "Claimtrie",
+  "clamscan",
   "cname",
   "coinjoin",
   "commandline",
@@ -379,6 +393,7 @@ sudo pacman -S nodejs-lts-fermium npm
   "fileupload",
   "Fira",
   "Fullscreen",
+  "Genymotoin",
   "geoip",
   "getfunding",
   "goodchain",
@@ -406,8 +421,6 @@ sudo pacman -S nodejs-lts-fermium npm
   "mlibre",
   "monero",
   "monospace",
-  "mychain",
-  "mynodes",
   "mystate",
   "nameserver",
   "neardev",
@@ -417,9 +430,9 @@ sudo pacman -S nodejs-lts-fermium npm
   "pamac",
   "paren",
   "parens",
-  "Ponzi",
   "prestart",
   "pwsh",
+  "Radeon",
   "redlist",
   "Reiner",
   "reposted",
@@ -434,10 +447,13 @@ sudo pacman -S nodejs-lts-fermium npm
   "struct",
   "stylesheet",
   "subaccounts",
+  "Swapfile",
+  "swapon",
   "syncmode",
   "Syyuu",
   "tmpfs",
   "TOKENNAME",
+  "torsocks",
   "Tradingview",
   "txid",
   "txpool",
