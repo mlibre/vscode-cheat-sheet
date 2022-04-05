@@ -46,6 +46,8 @@ A cheat sheet for Vscode.
 
 ## Extensions
 
+Disable all the extensions by default. and only enable for the workspace.
+
 - bungcip.better-toml
 - streetsidesoftware.code-spell-checker
 - dbaeumer.vscode-eslint
